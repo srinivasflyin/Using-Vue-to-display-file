@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>NTS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    body{
+	  margin-top:30px;
+	}
+	
+	#messageArea{
+	  display:none;
+	}
+	
+  </style>
+</head>
+<body>
+ <div class="container" id="app">
+  <div id="userFromArea" class="row">
+  	       <h1>{{message}}</h1>
+	       <form id="userForm" >
+			  <div class="from-group">
+				<input type="submit" v-if="genarateFile()" class="btn btn-primary" value="Generate pig latin encoding File" />
+			  </div>
+			</form>
+	  </div>
+	  <div>
+	 <object v-if="dispData" width="900" height="900" type="text/plain" data="./public/message.txt" border="0" >
+</object>
+</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+  el: '#app',
+  data () {
+    return {
+      message: 'Hello NTS',
+      dispData: false
+    }
+  },
+  methods: {
+  	async genarateFile () {
+  		try {
+  		var data = await axios.get('http://localhost:5000/readFile')
+  		if (data) {
+  			this.dispData = true;
+  		}
+  	 }catch (e){
+  	 	console.log(e)
+  	 }
+  	}
+  }
+})
+</script>
+</html>
