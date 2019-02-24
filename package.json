@@ -2,6 +2,7 @@
   "name": "fileUpload",
   "version": "1.0.0",
   "description": "file upload using vue js and node js",
+  "keywords":"['vue','node','vue js','node js','express js','axios']",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
