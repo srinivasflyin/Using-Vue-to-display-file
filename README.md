@@ -25,4 +25,6 @@ It continuesly send the file chunks of data to the client by setting the Respons
 
 
 index.html:
-whenver 
+whenver Node server called with router "/" it loads the index.html page.
+The Vue renders the page, now Vue is enabled to do the reactivity system.
+The Vue 
