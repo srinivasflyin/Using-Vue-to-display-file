@@ -58,11 +58,12 @@ Axios: A Promise based HTTP client for the browser and node.js. For more Info ht
 
 To run the Application
 
+
 ## Project setup
 ```
 npm install
 ```
-### Run the Project
+### Start the node server
 ```
 npm start
-```
+```  
