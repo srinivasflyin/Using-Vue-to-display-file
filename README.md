@@ -57,4 +57,12 @@ The created hook of the Vue will be called on the page load then generatedFile f
 Axios: A Promise based HTTP client for the browser and node.js. For more Info https://www.npmjs.com/package/axios
 
 To run the Application
-Use npm start from the commandprompt. 
+
+## Project setup
+```
+npm install
+```
+### Run the Project
+```
+npm start
+```
